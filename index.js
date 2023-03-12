@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
         return replaceTemplate(tempCard, el);
       })
       .join();
-    const output = tempOverview.replace("{%PRODUCT_CARDS%}", cardsHtml);
+    let output = tempOverview.replace("{%PRODUCT_CARDS%}", cardsHtml);
     res.writeHead(200, {
       "Content-type": "text/html",
     });
